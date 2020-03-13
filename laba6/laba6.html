@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style> 
+
+      .f{
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  min-height: 610px;
+  background: rgb(29, 76, 148);
+  box-shadow: 0 -200px 100px -120px rgb(121, 78, 134) inset;
+ 
+ 
+  animation: background 3s infinite alternate;
+}
+
+@keyframes background {
+  60% {
+    background: rgb(22, 10, 68);
+    box-shadow: 0 -200px 100px -100px rgb(131, 76, 156) inset;
+  }
+}
+.ko{
+   width: 105px;
+    position: absolute;
+    top:250px;
+    left:370px;
+   animation: linear 5s slidein infinite;
+   z-index: 0;
+  
+
+}
+@keyframes slidein {
+  0%{width: 80px;}
+  24%{z-index:0;}
+  25%{left:800px;top:120px;z-index: 3;}
+  50%{width: 145px; }
+  74%{}
+  75%{top:360px;left:280px; transform: rotate(360deg);}
+  100%{width: 70px;}
+}
+
+/* Helpers */
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #EEE;
+  font-size: 16px;
+}
+.cat{
+    width: 420px;
+    padding: 70px;
+    padding-top: 0px;
+    margin-left: 320px;
+    position: relative;
+    z-index: 1;
+}
+
+#replaceme {
+    position: relative;
+    margin-left: 250px;
+    margin-top: -400px;
+    font-size: 50px;
+    color: rgb(26, 204, 64);
+}
+#replaceme span {
+    position: absolute;
+    -webkit-transition: opacity 0.2s linear;
+    transition: opacity 0.3s linear;
+}
+#replaceme span:nth-child(2) {
+    opacity: 0;
+}
+#replaceme:hover span:nth-child(1) {
+    opacity: 0;
+    
+}
+#replaceme:hover span:nth-child(2) {
+    opacity: 1;
+    color: rgb(255, 9, 9);
+}
+
+
+
+#replacemee {
+    position: relative;
+    margin-left: 247px;
+    margin-top: 70px;
+    font-size: 50px;
+    color: rgb(26, 204, 64);
+}
+#replacemee span {
+    position: absolute;
+    -webkit-transition: opacity 0.2s linear;
+    transition: opacity 0.3s linear;
+}
+#replacemee span:nth-child(2) {
+    opacity: 0;
+}
+#replacemee:hover span:nth-child(1) {
+    opacity: 0;
+    
+}
+#replacemee:hover span:nth-child(2) {
+    opacity: 1;
+    color: rgb(255, 9, 9);
+}
+
+
+#replacemme {
+    position: relative;
+    margin-left: 245px;
+    margin-top: 143px;
+    font-size: 50px;
+    color: rgb(26, 204, 64);
+}
+#replacemme span {
+    position: absolute;
+    -webkit-transition: opacity 0.2s linear;
+    transition: opacity 0.3s linear;
+}
+#replacemme span:nth-child(2) {
+    opacity: 0;
+}
+#replacemme:hover span:nth-child(1) {
+    opacity: 0;
+    
+}
+#replacemme:hover span:nth-child(2) {
+    opacity: 1;
+    color: rgb(255, 9, 9);
+}
+
+
+#replacemmee {
+    position: relative;
+    margin-left: 245px;
+    margin-top: 213px;
+    font-size: 50px;
+    color: rgb(26, 204, 64);
+}
+#replacemmee span {
+    position: absolute;
+    -webkit-transition: opacity 0.2s linear;
+    transition: opacity 0.3s linear;
+}
+#replacemmee span:nth-child(2) {
+    opacity: 0;
+}
+#replacemmee:hover span:nth-child(1) {
+    opacity: 0;
+    
+}
+#replacemmee:hover span:nth-child(2) {
+    opacity: 1;
+    color: rgb(255, 9, 9);
+}
+
+
+
+
+#replacceme {
+    position: relative;
+    margin-left: 945px;
+    margin-top:-210px;
+    font-size: 50px;
+    color: rgb(26, 204, 64);
+}
+#replacceme span {
+    position: absolute;
+    -webkit-transition: opacity 0.2s linear;
+    transition: opacity 0.3s linear;
+}
+#replacceme span:nth-child(2) {
+    opacity: 0;
+}
+#replacceme:hover span:nth-child(1) {
+    opacity: 0;
+    
+}
+#replacceme:hover span:nth-child(2) {
+    opacity: 1;
+    color: rgb(255, 9, 9);
+}
+
+
+
+
+#replacccemee {
+    position: relative;
+    margin-left: 947px;
+    margin-top: 75px;
+    font-size: 50px;
+    color: rgb(26, 204, 64);
+}
+#replacccemee span {
+    position: absolute;
+    -webkit-transition: opacity 0.2s linear;
+    transition: opacity 0.3s linear;
+}
+#replacccemee span:nth-child(2) {
+    opacity: 0;
+}
+#replacccemee:hover span:nth-child(1) {
+    opacity: 0;
+    
+}
+#replacccemee:hover span:nth-child(2) {
+    opacity: 1;
+    color: rgb(255, 9, 9);
+}
+
+
+#replaccccemme {
+    position: relative;
+    margin-left: 945px;
+    margin-top: 140px;
+    font-size: 50px;
+    color: rgb(26, 204, 64);
+}
+#replaccccemme span {
+    position: absolute;
+    -webkit-transition: opacity 0.2s linear;
+    transition: opacity 0.3s linear;
+}
+#replaccccemme span:nth-child(2) {
+    opacity: 0;
+}
+#replaccccemme:hover span:nth-child(1) {
+    opacity: 0;
+    
+}
+#replaccccemme:hover span:nth-child(2) {
+    opacity: 1;
+    color: rgb(255, 9, 9);
+}
+
+
+
+#replacccccemmee {
+    position: relative;
+    margin-left: 945px;
+    margin-top: 210px;
+    font-size: 50px;
+    color: rgb(26, 204, 64);
+}
+#replacccccemmee span {
+    position: absolute;
+    -webkit-transition: opacity 0.2s linear;
+    transition: opacity 0.3s linear;
+}
+#replacccccemmee span:nth-child(2) {
+    opacity: 0;
+}
+#replacccccemmee:hover span:nth-child(1) {
+    opacity: 0;
+    
+}
+#replacccccemmee:hover span:nth-child(2) {
+    opacity: 1;
+    color: rgb(255, 9, 9);
+}
+.vb{
+   float: left;
+}
+.nad{
+    background-color: rgb(30, 192, 221);
+    box-shadow: inset 2px 2px 5px rgba(154, 147, 140, 0.5), 1px 1px 5px rgba(255, 255, 255, 1);
+    display: inline-block;
+    margin-left: 470px;
+    margin-top: 130px;
+    position:relative; 
+  
+    
+    
+}
+
+.five:hover {
+  -o-transform: scaleY(1.2);
+  -ms-transform: scaleY(1.2);
+  -moz-transform: scaleY(1.2);
+  -webkit-transform: scaleY(1.2);
+  transform: scaleY(1.2);
+  color: rgb(41, 255, 13);
+}
+.wrap{
+    margin-left: 300px;
+    position: absolute;
+    margin-top: -300px;
+}
+.wwrap{
+    margin-left: 300px;
+    margin-bottom: -400px;
+    position: absolute;
+}
+.wrrap{
+    margin-left: 1200px;
+    position: absolute;
+    margin-top: -200px;
+}
+.wraap{
+    margin-left: 600px;
+    position: absolute;
+    margin-top: 200px;
+}
+.wrapp{
+    margin-left: 900px;
+    margin-top: 100px;
+    position: absolute;
+}
+.wwwrap{
+    margin-left: 100px;
+    margin-top: 100px;
+    position: absolute;
+}
+.wwwrapp{
+    margin-left: 300px;
+    margin-top: 400px;
+  
+   
+}
+
+
+
+.fiive:hover  {
+    
+   
+  color: rgba(255, 255, 255, 0);
+ 
+   
+}
+
+
+h3{
+    margin-left: 340px;
+    color: blueviolet;
+   font-size: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+</style>
+</head>
+<body>
+    <div class="f"> 
+        <h3>Найди надпись ,которая отличатся от других</h3>
+        <img class="cat" src="fr.png" alt="">
+        <img class="ko" src="ko.png" alt="">
+
+        <div id="replaceme">
+            <span>F</span>
+            <span>L</span>
+        </div>
+        <div id="replacemee">
+            <span>R</span>
+            <span>O</span>
+        </div>
+        <div id="replacemme">
+            <span>O</span>
+            <span>V</span>
+        </div>
+        <div id="replacemmee">
+            <span>G</span>
+            <span>E</span>
+        </div>
+
+
+
+<div class="vb">
+        <div id="replacceme">
+            <span>M</span>
+            <span>F</span>
+        </div>
+        <div id="replacccemee">
+            <span>E</span>
+            <span>O</span>
+        </div>
+        <div id="replaccccemme">
+            <span>A</span>
+            <span>O</span>
+        </div>
+        <div id="replacccccemmee">
+            <span>T</span>
+            <span>D</span>
+        </div>
+        </div>
+        <div>
+        <div class="wrap"><div class="five"><kbd>КВА</kbd></div></div>
+        <div class="wwrap"><div class="five"><kbd>КВА</kbd></div></div>
+        <div class="wrrap"><div class="five"><kbd>КВА</kbd></div></div>
+        <div class="wraap"><div class="five"><kbd>КВА</kbd></div></div>
+        <div class="wrapp"><div class="five"><kbd>КВА</kbd></div></div>
+        <div class="wwwrap"><div class="five"><kbd>КВА</kbd></div></div>
+    
+       
+        </div>
+        <div class="wwwrapp"><div class="fiive"><kbd>КВА</kbd></div></div>
+        
+
+       
+    
+    
+    </div>
+   
+    
+</body>
+</html>
