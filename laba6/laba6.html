@@ -10,9 +10,10 @@
   width: 100%;
   max-width: 100%;
   height: 100%;
-  min-height: 610px;
+  min-height: 640px;
   background: rgb(29, 76, 148);
   box-shadow: 0 -200px 100px -120px rgb(121, 78, 134) inset;
+  padding-top: 50px;
  
  
   animation: background 3s infinite alternate;
@@ -72,8 +73,8 @@ body {
 }
 #replaceme span {
     position: absolute;
-    -webkit-transition: opacity 0.2s linear;
-    transition: opacity 0.3s linear;
+    -webkit-transition:  0.2s linear;
+    transition:  0.3s linear;
 }
 #replaceme span:nth-child(2) {
     opacity: 0;
@@ -98,8 +99,8 @@ body {
 }
 #replacemee span {
     position: absolute;
-    -webkit-transition: opacity 0.2s linear;
-    transition: opacity 0.3s linear;
+    -webkit-transition:  0.2s linear;
+    transition:  0.3s linear;
 }
 #replacemee span:nth-child(2) {
     opacity: 0;
@@ -175,8 +176,8 @@ body {
 }
 #replacceme span {
     position: absolute;
-    -webkit-transition: opacity 0.2s linear;
-    transition: opacity 0.3s linear;
+    -webkit-transition:  0.2s linear;
+    transition:  0.3s linear;
 }
 #replacceme span:nth-child(2) {
     opacity: 0;
@@ -202,8 +203,8 @@ body {
 }
 #replacccemee span {
     position: absolute;
-    -webkit-transition: opacity 0.2s linear;
-    transition: opacity 0.3s linear;
+    -webkit-transition:  0.2s linear;
+    transition:  0.3s linear;
 }
 #replacccemee span:nth-child(2) {
     opacity: 0;
@@ -289,6 +290,7 @@ body {
   -webkit-transform: scaleY(1.2);
   transform: scaleY(1.2);
   color: rgb(41, 255, 13);
+  display: none;
 }
 .wrap{
     margin-left: 300px;
@@ -322,7 +324,7 @@ body {
 }
 .wwwrapp{
     margin-left: 300px;
-    margin-top: 400px;
+    margin-top: 200px;
   
    
 }
@@ -332,7 +334,8 @@ body {
 .fiive:hover  {
     
    
-  color: rgba(255, 255, 255, 0);
+  color: rgba(221, 212, 212, 0.0);
+  
  
    
 }
@@ -343,6 +346,69 @@ h3{
     color: blueviolet;
    font-size: 30px;
 }
+.fg{
+    padding-top: 70px;
+}
+
+.div {
+  position: relative;
+  height: 1.7em;
+  
+  padding: .1em;
+
+  font-size: 1.2em;
+  color: rgb(245, 99, 250,0);
+  }
+.div:before {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  left: .2em;
+  min-width: 5em;
+  height: 2em;
+  padding: .2em;
+  background-image: url(fly.png);
+  background-size: contain ;
+  background-repeat: no-repeat;
+ 
+  animation: timing 5s infinite;
+  line-height: 1em;
+  
+  text-align: center;
+  text-transform: capitalize;
+  white-space: nowrap;
+ 
+  }
+  
+@keyframes timing {
+  50%{
+    left: 100%;
+    margin-left: -5.6em;
+  }
+}
+
+.linear:before {
+  animation-timing-function: ease;
+  }
+.ease:before {
+  animation-timing-function: linear;
+  }
+.ease-in:before {
+  animation-timing-function: linear;
+  }
+.ease-out:before {
+  animation-timing-function: ease;
+  }
+.ease-in-out:before {
+  animation-timing-function: linear;
+  }
+  .ease-outt:before {
+  animation-timing-function: ease;
+  }
+
+  .ease-in-outt:before {
+  animation-timing-function: linear;
+  }
 
 
 
@@ -359,7 +425,8 @@ h3{
 </head>
 <body>
     <div class="f"> 
-        <h3>Найди надпись ,которая отличатся от других</h3>
+        
+        
         <img class="cat" src="fr.png" alt="">
         <img class="ko" src="ko.png" alt="">
 
@@ -378,7 +445,10 @@ h3{
         <div id="replacemmee">
             <span>G</span>
             <span>E</span>
+           
         </div>
+        
+        
 
 
 
@@ -400,23 +470,35 @@ h3{
             <span>D</span>
         </div>
         </div>
+        
         <div>
-        <div class="wrap"><div class="five"><kbd>КВА</kbd></div></div>
-        <div class="wwrap"><div class="five"><kbd>КВА</kbd></div></div>
-        <div class="wrrap"><div class="five"><kbd>КВА</kbd></div></div>
-        <div class="wraap"><div class="five"><kbd>КВА</kbd></div></div>
+        <div class="wrap"><div class="fiive"><kbd>КВА</kbd></div></div>
+        <div class="wwrap"><div class="fiive"><kbd>КВА</kbd></div></div>
+        <div class="wrrap"><div class="fiive"><kbd>КВА</kbd></div></div>
+        
         <div class="wrapp"><div class="five"><kbd>КВА</kbd></div></div>
         <div class="wwwrap"><div class="five"><kbd>КВА</kbd></div></div>
     
        
-        </div>
-        <div class="wwwrapp"><div class="fiive"><kbd>КВА</kbd></div></div>
+    </div>
+        <div class="wwwrapp"><div class="five"><kbd>КВА</kbd></div></div>
+        
         
 
-       
+        <div class="fg">
+
+            <div class="ease div " >1</div>
+            <div class="linear div" >1</div>
+            <div class="ease-in div " >1</div>
+            <div class="ease-out div" >1</div>
+            <div class="ease-in-out div" >1</div>
+            <div class="ease-outt div" >1</div>
+            <div class="ease-in-outt div" >1</div>
+            </div>
     
     
     </div>
+    
    
     
 </body>
