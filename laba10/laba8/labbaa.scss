@@ -1,0 +1,30 @@
+* {
+    box-sizing: border-box;
+  }
+  .baner {
+    background-image: url(fon.jpg);
+    background-size: cover;
+    width: 100%;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+  }
+  .fonone {
+
+    display: flex;
+    justify-content: center;
+    padding-top: 8%;
+    padding-bottom: 1%;
+  }
+  
+  .fontwo {
+  
+    display: flex;
+    justify-content: center;
+    padding: 6% 0;
+    a {
+      padding: 5px;
+      background-color: rgba(99, 92, 92, 0.5);
+    }
+  }
+  

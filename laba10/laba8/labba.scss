@@ -1,0 +1,426 @@
+$font-stack:    Helvetica, sans-serif;
+$color:  rgba(59, 24, 30, 1);
+$border: 2px solid white;
+$fifteen: 15px;
+$none: none;
+
+body {
+  @extend .error;
+  background-color: rgb(166, 171, 0 ) + rgb(0, 0, 175);
+  flex-direction: column;
+
+}
+
+@import 'labbaa';
+
+
+
+@mixin trans($property) {
+  color: $property;
+}
+.error{
+  margin: 0;
+  padding: 0;
+}
+
+
+
+h2 {
+  
+  @include trans(rgba(255, 255, 255, 0.9));
+  padding-top: 10px;
+
+}
+
+a {
+  @include trans(rgba(255, 255, 255, 0.9));
+  text-decoration: $none;
+}
+
+.menu a:hover {
+  @include trans(tomato);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex-direction: row;
+  min-height: 100%;
+  flex: 1 1 auto;
+}
+
+article {
+  background-color: #546e7a;
+  flex: 2 2 12em;
+  padding: 1em;
+  text-align: center;
+}
+
+.right,
+aside {
+  flex: 1;
+  background-color: #455a64;
+}
+
+.right {
+  order: -1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+
+}
+
+.navv,
+footer {
+  flex: 0 0 5em;
+  background-color: #37474f;
+}
+
+aside {
+  text-align: center;
+  li {
+    list-style: $none;
+    margin: 10px;
+  
+  }
+
+}
+
+aside a:hover {
+ 
+  @include trans(rgb(170, 2170, 170));
+}
+
+
+
+
+
+
+
+.navv {
+  display: flex;
+  flex-wrap: wrap;
+  /*перенос строки */
+  justify-content: space-between;
+  /*прижимает содержимое к краям */
+  align-items: center;
+  /*выравнивает элементы по центру на вертикальной */
+  background-color: $color;
+
+  .menu {
+    display: flex;
+    list-style: $none;
+  
+  
+  }
+
+}
+
+
+
+.content {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Forum', cursive;
+  @include trans(rgba(255, 255, 255, 0.9));
+}
+
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  /*перенос строки */
+  justify-content: space-around;
+  align-items: center;
+  /*выравнивает элементы по центру на вертикальной */
+  .foots {
+    display: flex;
+    list-style: none;
+  
+  
+  }
+ 
+}
+
+
+
+.foots{
+   ul {
+  list-style: $none;
+  /*убираем маркеры списка*/
+  margin: 0;
+  /*убираем отступы*/
+  padding-left: 0;
+  /*убираем отступы*/
+}
+a {
+  text-decoration: $none;
+  /*убираем подчеркивание текста ссылок*/
+  @include trans(rgba(255, 255, 255, 0.9));
+}
+li {
+  float: left;
+  /*Размещаем список горизонтально для реализации меню*/
+  margin-right: $fifteen;
+  /*Добавляем отступ у пунктов меню*/
+
+}
+}
+
+
+
+
+.main-content {
+  /* 1 flex-grow, 0 flex-shrink, auto flex-basis */
+  flex: 1 0 auto;
+}
+
+
+
+.menu 
+{
+  ul {
+  list-style: $none;
+  /*убираем маркеры списка*/
+  margin: 0;
+  /*убираем отступы*/
+  padding-left: 0;
+  /*убираем отступы*/
+}
+a {
+  text-decoration: $none;
+  /*убираем подчеркивание текста ссылок*/
+  @include trans(rgba(255, 255, 255, 0.9));
+}
+li {
+  float: left;
+  /*Размещаем список горизонтально для реализации меню*/
+  margin-right: $fifteen;
+  /*Добавляем отступ у пунктов меню*/
+
+}
+
+}
+
+@mixin transform($opacityy,$widthh) {
+  opacity: $opacityy;
+  width: $widthh;
+}
+
+
+.foto1 {
+  background-image: url(fot1.jpg);
+  @include transform(0.9,100%);
+}
+
+.foto2 {
+  background-image: url(fot22.jpg);
+  @include transform(0.9,100%);
+}
+
+.foto3 {
+  background-image: url(fot333.png);
+  @include transform(0.8,100%);
+}
+
+.foto {
+  padding: 0 25%;
+}
+
+.ft {
+  padding-top: 180px/10px * 10%;
+  padding-bottom: 4%;
+}
+
+p {
+  opacity: 1;
+}
+
+.foto {
+  height: 100%;
+}
+$status-colors: (
+
+  primary: #000,
+  success: #27BA6C,
+  info: #03a9f4,
+  warning: #FF8833,
+  danger: #ff1a1a
+);
+
+.message {
+
+  @each $status, $color in $status-colors {
+
+    &--#{$status} {
+
+      background: $color;
+    }
+  }
+}
+
+
+@media all and (max-width: 832px) {
+  .navv {
+      display: flex;
+      flex-wrap: wrap;
+      /*перенос строки */
+      justify-content: space-around;
+      /*прижимает содержимое к краям */
+      align-items: center;
+      /*выравнивает элементы по центру на вертикальной */
+
+
+
+  }
+
+  .navv .menu ul {
+      display: flex;
+      list-style: $none;
+      padding: 50px auto;
+  }
+
+  .nav {
+      display: $none;
+      .menu {
+        padding: 18px 0;
+    }
+
+  }
+
+ 
+
+  footer {
+      display: flex;
+      flex-wrap: wrap;
+      /*перенос строки */
+      justify-content: space-around;
+      /*прижимает содержимое к краям */
+      align-items: center;
+      /*выравнивает элементы по центру на вертикальной */
+
+
+  }
+
+  footer .foots ul {
+      display: flex;
+      list-style: $none;
+      padding: 50px auto;
+  }
+
+  .d p {
+      font-size: 11px/100px *100%;
+  }
+
+  .ft {
+      font-size: 12px;
+  }
+
+
+}
+
+@media all and (max-width: 500px) {
+
+
+  .navv .menu ul {
+      display: flex;
+      flex-direction: column;
+
+      text-align: center;
+
+
+  }
+
+  .navv .menu ul li {
+      border-bottom: 1px solid rgba(87, 86, 86, 0.5);
+
+
+  }
+
+  footer .foots ul {
+      display: flex;
+      flex-direction: column;
+
+      text-align: center;
+      opacity: 0.9;
+
+
+  }
+
+  footer .foots ul li {
+      border-bottom: 1px solid rgba(87, 86, 86, 0.5);
+
+
+  }
+
+  .fonone h1 {
+      font-size: $fifteen;
+  }
+
+  .fontwo a {
+      font-size: 10px;
+  }
+
+  main {
+      flex-direction: column;
+      min-height: 100%;
+      flex: 1 1 auto;
+  }
+
+  .foots a {
+      font-size: 11px;
+  }
+
+  .menu a {
+      font-size: 11px/100px * 100%;
+  }
+
+  .foto {
+      margin-bottom: 2%;
+      margin-top: 4%;
+
+      width: 74%;
+  }
+
+  .d p {
+      font-size: 12px;
+  }
+
+  .ft {
+      padding-top: 250%;
+  }
+
+  .foto3 {
+      margin-bottom: 5%;
+  }
+
+  h1,
+  p {
+      font-size: 20px;
+  }
+
+  article ul li {
+      font-size: $fifteen;
+  }
+
+  article p {
+      font-size: $fifteen;
+  }
+
+  aside {
+      border-top: $border;
+      border-bottom: $border;
+  }
+
+  .right {
+
+      border-bottom: $border;
+  }
+
+
+
+}
