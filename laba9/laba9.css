@@ -224,6 +224,12 @@ a:focus {
     background-color: #000000;
     color: #FFFFFF; 
   }
+  .ft a{
+      color: white;
+  }
+  .bzak a{
+      color: white;
+  }
   
 
 @media only screen and (max-width: 500px) {
