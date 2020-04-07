@@ -57,7 +57,7 @@ a {
 
 main {
     display: flex;
-    flex-direction: column;
+    
 }
 
 main {
@@ -288,7 +288,7 @@ p {
         display: flex;
         flex-wrap: wrap;
         /*перенос строки */
-        justify-content: space-around;
+        justify-content: center;
         /*прижимает содержимое к краям */
         align-items: center;
         /*выравнивает элементы по центру на вертикальной */
@@ -300,6 +300,7 @@ p {
         display: flex;
         list-style: none;
         padding: 50px auto;
+        padding-left: 5%;
     }
 
     .d p {
@@ -308,6 +309,10 @@ p {
 
     .ft {
         font-size: 12px;
+        
+    }
+    .ft a{
+        display: none;
     }
 
 

@@ -78,7 +78,8 @@ aside {
 .navv,
 footer {
   flex: 0 0 5em;
-  background-color: #37474f;
+  background-color: darken($color,10%);
+  
 }
 
 aside {
@@ -243,24 +244,15 @@ p {
 .foto {
   height: 100%;
 }
-$status-colors: (
-
-  primary: #000,
-  success: #27BA6C,
-  info: #03a9f4,
-  warning: #FF8833,
-  danger: #ff1a1a
+$colors: (
+  pink: #FA6ACC,
+  glamour: #F02A52,
+  sky: #09A6E4
 );
+ 
 
-.message {
-
-  @each $status, $color in $status-colors {
-
-    &--#{$status} {
-
-      background: $color;
-    }
-  }
+.element {
+  background-color: map-get($colors, pink);
 }
 
 

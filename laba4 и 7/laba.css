@@ -99,6 +99,7 @@ nav{
     grid-row-gap: 10px;
     padding: 0 0px;
     margin: 0 60px;
+    
 }
 
 .foto1{
@@ -143,6 +144,9 @@ background-image: url(fot1.jpg);
     grid-column-gap: 15px;
     margin: 30px 60px;
     padding-top: 5%;
+    
+        
+    
 }
 .bzak a{
     border: 1px solid black;
@@ -153,6 +157,7 @@ background-image: url(fot1.jpg);
 }
 .text{
     text-align: center;
+    margin-right: 7%;
 }
 .big{
     padding: 0 20%;
@@ -225,12 +230,7 @@ background-image: url(fot1.jpg);
 }
 
 
-.tfoto{
-    margin-top: 100px;
-    display: grid;
-    grid-template-columns:repeat(auto-fit,minmax(240px,1fr)) ;
-    grid-column-gap: 15px;
-}
+
 .fot5{
     width: 87%;
     background-repeat: no-repeat;
@@ -288,26 +288,39 @@ a:hover{
 li{
     margin-top: 10px;
 }
+.o{
+    
+    align-self: center;
+}
 @media only screen and (min-width : 769px) and (max-width : 1026px) {
     .gal{
         display: grid;
-        grid-template-columns: repeat(auto-fit,minmax(380px,1fr));
-        border: 1px sollid gold;
-       
-        padding: 0 0px;
-        margin-left: 160px;
+        grid-template-columns: 1fr 1fr;
+      grid-template-rows:1fr 1fr ;
+      
+     grid-column-gap: 20%;
+     grid-row-gap: 10%;
+        padding-right: 7%;
+        margin-left: 180px;
+        margin-right: 16%;
+        margin-bottom: 8%;
+        
     }
+    .foto{
+        width: 120%;
+        height: 110%;
+    }
+    
    
    
     .fot5{
         width: 45%;
         background-repeat: no-repeat;
         background-size: cover;
-       
-       
     }
+    
     .tfoto{
-     margin-right: 140px;
+     margin-right: 10%;
         display: grid;
         grid-template-columns:repeat(auto-fit,minmax(240px,1fr)) ;
         grid-column-gap: 15px;
@@ -323,6 +336,9 @@ li{
     .foots{
         padding-top: 30px;
         padding-right: 20px;
+    }
+    .ft{
+        padding-bottom: 4%;
     }
   
 
