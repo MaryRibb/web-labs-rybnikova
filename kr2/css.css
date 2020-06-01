@@ -1,0 +1,335 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color:rgba(46, 28, 26, 0.781);
+    flex-direction: column;
+    color: white;
+    font-family: 'Playfair Display', serif;
+
+}
+
+
+.fon{
+    background-image: url(https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?cs=srgb&dl=pexels-3183150.jpg&fm=jpg);
+    background-size: cover;
+    width: 100%;
+    text-align: center;
+    display: flex;
+  flex-direction: column;
+    justify-content: center;
+  padding-top:5%;
+  padding-bottom: 15%;
+  align-items: center;
+ 
+  
+}
+.fonone{
+    
+    width: max-content; 
+    background-color: rgba(46, 28, 26, 0.425);
+  
+    
+}
+
+.fontwo{
+    
+    width: max-content;   
+    margin-top: 80px;
+  
+ 
+}
+.fontwo a{
+    border: 1px solid white;
+    font-size: 12px;
+    padding: 12px 25px;
+    color: rgba(255, 255, 255, 0.959);
+    background-color: rgba(37, 22, 22, 0.521);
+}
+h1{
+    color: white;
+}
+.navbar-nav.nav-item {
+    color: rgb(77, 31, 31);
+}
+.navbar-nav a :hover{
+    font-weight: bold;
+    color: tomato;
+}
+a{
+    text-decoration: none;
+}
+h2{
+    color: white;
+}
+h4{
+    color: rgba(255, 255, 255, 0.836);
+    text-shadow: 1px 1px 2px black, 0 0 1em rgba(46, 28, 26, 0.699);
+}
+
+.zagolovok{
+    align-items: center;
+   justify-content: center;
+    display: grid;
+    padding-top: 20px;
+    margin-bottom:30px;
+   
+
+}
+.zagolovokk{
+    align-items: center;
+   justify-content: center;
+    display: grid;
+    padding-top: 10px;
+}
+.zagolovokkk{
+    align-items: center;
+   justify-content: center;
+    display: grid;
+    padding: 20px;
+}
+.zagolovokm{
+    align-items: center;
+   justify-content: center;
+    display: grid;
+text-align: center;
+    margin-bottom:30px;
+   
+
+}
+
+.zagolovok h3{
+    font-family: 'Forum', cursive; 
+    width: max-content; 
+    text-shadow: 1px 1px 2px black, 0 0 1em rgba(46, 28, 26, 0.699); 
+}
+.cart{
+   
+    background-color: rgba(204, 196, 190, 0.075);
+}
+.gal{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+    grid-column-gap: 20px;
+    grid-row-gap: 10px;
+    padding: 0 0px;
+    margin: 0 60px;
+    
+}
+
+.foto1{
+background-image: url(http://kuznetsk-city.ru/uimg/00000000064.jpg);
+
+}
+ .foto2{
+    background-image: url(https://sun9-33.userapi.com/c857416/v857416113/13ac24/KygFboJmV9Y.jpg);
+}
+.foto3{
+    background-image: url(http://www.jbharrisondds.com/wp-content/uploads/Harrison-Sleepy-Teenager_124196230-sm.jpg);
+}
+.foto4{
+    background-image: url(https://assets.plainpicture.com/public-b3c/images/medium/med-p426m766543f.jpg);
+}
+.fot5{
+    background-image: url(fot5.jpg);
+}
+.foto{
+    
+    
+    background-repeat: no-repeat;
+    padding-bottom: 100%;
+    padding-left:8% ;
+    padding-top: 10%;
+    position: relative;
+    
+}
+.ft{
+    bottom: 0;
+    position: absolute;
+    margin-bottom: 5%;
+}
+.ft:hover{
+    color: rgb(78, 77, 77);
+}
+.missia{
+    display: grid;
+    background-color: rgba(255, 250, 250, 0.767);
+    margin: 15px;
+    box-shadow: 20px -15px 10px 5px rgba(0, 0, 0, .2);
+    color:rgb(78, 77, 77) ;
+    align-items: center;
+    justify-content: center;
+}
+.forma
+{
+    display: grid;
+   
+    margin: 15px;
+    box-shadow: 20px -15px 10px 5px rgba(0, 0, 0, .2);
+    
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.rounded {
+    counter-reset: li; 
+    list-style: none; 
+    font: 14px "Trebuchet MS", "Lucida Sans";
+    padding: 0;
+    text-shadow: 0 1px 0 rgba(255,255,255,.5);
+    margin: 40px;
+    }
+    .rounded a {
+    position: relative;
+    display: block;
+    padding: .4em .4em .4em 2em;
+    margin: .5em 0;
+    background: #DAD2CA;
+    color: #444;
+    text-decoration: none;
+    border-radius: .3em;
+    transition: .3s ease-out;
+    }
+    .rounded a:hover {background: #E9E4E0;}
+    .rounded a:hover:before {transform: rotate(360deg);}
+    .rounded a:before {
+    content: counter(li);
+    counter-increment: li;
+    position: absolute;
+    left: -1.3em;
+    top: 50%;
+    margin-top: -1.3em;
+    background: #8FD4C1;
+    height: 2em;
+    width: 2em;
+    line-height: 2em;
+    border: .3em solid white;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 2em;
+    transition: all .3s ease-out;
+    }
+    .profile{
+        text-align: center;
+        margin: 0 auto;
+    }
+    .profile label{
+        margin: 10px;
+    }
+    .profile input{
+        width: 150px;
+    }
+    footer{
+        background-color: rgba(48, 34, 34, 0.479);
+    }
+
+@media only screen and (max-width: 600px) {
+    .foto{
+    
+    
+        background-repeat: no-repeat;
+        padding-bottom: 20%;
+        padding-left:8% ;
+        padding-top: 10%;
+        position: relative;
+        
+    }
+
+  
+  .nav-item a {
+      font-size: 13px;
+  }
+  div h2{
+      font-size: 20px;
+  }
+  .fonone{
+      margin-top: 35px; 
+     
+     
+  }
+  .fontwo{
+   margin-top: 10px;
+   margin-left: 30px;
+      
+  }
+  .fontwo a{
+    border: 1px solid white;
+    font-size: 10px;
+    padding: 8px 10px;
+    color: rgb(255, 255, 255,0.8);
+    
+}
+.zagolovok h3{
+    font-size: 20px;
+
+}
+.zagolovokm h6{
+    font-size: 14px;
+
+}
+.gal{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+    grid-column-gap: 20px;
+    padding: 0 14%;
+    margin: 0 0px;
+}
+.missia{
+    text-align: center;
+}
+.ft{
+    margin: 0;
+    padding: 0;
+    
+}
+.foto{
+    margin: 0;
+    background-color: rgba(49, 39, 38, 0.281);
+    border: 1px solid rgba(48, 35, 35, 0.2);
+   
+}
+
+
+
+
+}
+
+@media (max-width:600px){
+.fonone h1{font-size:15px;}
+.foto{
+    
+    
+    background-repeat: no-repeat;
+    padding-bottom: 50%;
+    padding-left:8% ;
+    padding-top: 10%;
+    position: relative;
+    
+}
+
+}
+
+@media only screen and (min-width : 600px) and (max-width : 1026px) {
+    .gal{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      grid-template-rows:1fr 1fr ;
+      
+     grid-column-gap: 20%;
+    
+        padding-right: 7%;
+        margin-left: 120px;
+        margin-right: 16%;
+        margin-bottom: 8%;
+        
+    }
+    .foto{
+        width: 140%;
+        height: 90%;
+    }
+    
+ 
+  
+
+}
+
