@@ -80,6 +80,8 @@ h4{
      padding-top: 20px;
      margin-bottom:30px;
     
+     
+    
  
 
 }
@@ -88,6 +90,9 @@ h4{
    justify-content: center;
     display: grid;
     padding-top: 10px;
+    text-align: center;
+    page-break-after: 20px;
+    background-color: rgba(49, 31, 31, 0.486);
 }
 .zagolovokkk{
     align-items: center;

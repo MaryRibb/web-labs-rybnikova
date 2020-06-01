@@ -12,13 +12,67 @@
     <link rel="stylesheet" href="blog.css">
 
     <title>Контрольный рубеж 2 </title>
-    <style>
-        .nav-link:hover {
-            font-weight: bold;
-            color: rgb(65, 38, 38);
+    <style>@media print {
+        /* здесь будут стили для печати */
+        body {
+            font-size: 28px;
+            color: black;
+        }
+        a[href^="http"]:not([href*="mywebsite.com"])::after {
+    content: " (" attr(href) ")";
+  }
+        .foots a{
+            color: black;
+            text-decoration: none;
+        }
+        nav{
+            display: none;
 
         }
-    </style>
+        .zagolovok{
+            display: none;
+        }
+        .filtr{
+            display: none;
+        }
+       
+        .fontwo{
+            display: none;
+        }
+        .f{
+            display: none;
+        }
+        .str{
+            display: none;
+        }
+        .tfoto{
+            display: none;
+        }
+        #menu1{
+            display: none; 
+        }
+        
+        p{font-size: 38px;}
+        nav{
+            display: none;
+        }
+        .content{
+            color: black;
+        }
+        .gal{
+            display: none;
+        }
+       
+        .f{
+            display: grid;
+            margin-left: 250px;
+
+        }
+        .ff{opacity: 0.5;}
+    
+    }
+    .footss{display: none;}
+        </style>
 </head>
 
 <body>
@@ -77,6 +131,17 @@
         </div>
     </header>
     <div >
+        <div>
+            <div class="zagolovok">
+               Кто мы?
+            </div>
+            <div class="zagolovokk">
+                Мы убеждены, что знания и навыки должны служить человеку, а не наоборот. Возможность каждого человека создавать и следовать персональной траектории развития — наша цель.
+                    Мы, Университет 2035, работаем над тем, чтобы персонализация образования стала приоритетом для государства, бизнеса, личности, а сам человек мог легко и свободно ставить перед собой цели и достигать их, имея актуальный набор знаний и умений, и оставаясь востребованным в течение всего жизненного пути.
+                    Кем и каким человеку быть — его выбор. Менять приоритеты, принимать вызовы и новые возможности, формировать в себе личность и профессионала — его право. Мы, Университет 2035, работаем для того, чтобы возможность человека учиться и развиваться на каждом этапе жизни была реализована наилучшим для него образом.
+                </div>
+
+        </div>
         <div class="zagolovok">
             ФИЛЬТРЫ
         </div>
@@ -313,7 +378,7 @@
 
             </div>
         </section>
-        <div>
+        <div class="str">
             <h6>Страницы</h6>
             <ul class="hr">
                 <li><a href="#">1</a></li>
