@@ -1,0 +1,477 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color:rgba(46, 28, 26, 0.781);
+    flex-direction: column;
+    color: white;
+    font-family: 'Playfair Display', serif;
+
+}
+
+
+.fon{
+    background-image: url(https://images.pexels.com/photos/518543/pexels-photo-518543.jpeg?cs=srgb&dl=pexels-518543.jpg&fm=jpg);
+    background-size: cover;
+    width: 100%;
+    text-align: center;
+    display: flex;
+  flex-direction: column;
+    justify-content: center;
+  padding-top:5%;
+  padding-bottom: 15%;
+  align-items: center;
+ 
+  
+}
+.fonone{
+    
+    width: max-content; 
+    background-color: rgba(46, 28, 26, 0.425);
+  
+    
+}
+
+.fontwo{
+    
+    width: max-content;   
+    margin-top: 80px;
+  
+ 
+}
+.fontwo a{
+    border: 1px solid white;
+    font-size: 12px;
+    padding: 12px 25px;
+    color: rgba(255, 255, 255, 0.959);
+    background-color: rgba(37, 22, 22, 0.521);
+}
+h1{
+    color: white;
+}
+.navbar-nav.nav-item {
+    color: rgb(77, 31, 31);
+}
+.navbar-nav a :hover{
+    font-weight: bold;
+    color: tomato;
+}
+a{
+    text-decoration: none;
+}
+h2{
+    color: white;
+}
+h4{
+    color: rgba(255, 255, 255, 0.836);
+    text-shadow: 1px 1px 2px black, 0 0 1em rgba(46, 28, 26, 0.699);
+}
+
+.zagolovog{
+    align-items: center;
+   justify-content:space-between;
+    display: flex;
+    padding:10px;
+    margin-bottom:30px;
+}
+.zagolovok{
+    align-items: center;
+    justify-content: center;
+     display: grid;
+     padding-top: 20px;
+     margin-bottom:30px;
+    
+ 
+
+}
+.zagolovokk{
+    align-items: center;
+   justify-content: center;
+    display: grid;
+    padding-top: 10px;
+}
+.zagolovokkk{
+    align-items: center;
+   justify-content: center;
+    display: grid;
+    padding: 20px;
+}
+.zagolovokm{
+    align-items: center;
+   justify-content: center;
+    display: grid;
+text-align: center;
+    margin-bottom:30px;
+   
+
+}
+
+.zagolovok h3{
+    font-family: 'Forum', cursive; 
+    width: max-content; 
+    text-shadow: 1px 1px 2px black, 0 0 1em rgba(46, 28, 26, 0.699); 
+}
+
+.gal{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+    grid-column-gap: 20px;
+    grid-row-gap: 10px;
+    padding: 0 0px;
+    margin: 0 60px;
+    
+}
+
+.foto1{
+background-image: url(https://language-plus.ru/wp-content/uploads/sites/13/2019/7.jpg);
+
+}
+ .foto2{
+    background-image: url(https://yellmed.ru/cache/static/stock/a27b46498c53d8bfadb140fca32f1e6f-420x282x100.jpg);
+}
+.foto3{
+    background-image: url(https://image.shutterstock.com/image-photo/group-students-notebook-outdoors-260nw-74199727.jpg);
+}
+.foto4{
+    background-image: url(https://учисьучись.рф/media/uploads/news/егэ_не_нужен_в_хакассии_для_вуза.jpg);
+    
+   
+}
+.foto5{
+    background-image: url(http://medyaegitim.net/wp-content/uploads/2018/09/ghjgh.jpg);
+    
+   
+}
+.foto6{
+    background-image: url(https://1.bp.blogspot.com/-JU5BAuqZNwk/U3RQTBsxAQI/AAAAAAAAAG8/P70_LEuh0cg/w400-h280-p/0,,69826037,00.jpg);
+    
+   
+}
+.foto7{
+    background-image: url(http://mysl.info/tinybrowser/images/photo/2018/12/mba-nedir-1.jpg);
+    
+   
+}
+.foto8{
+    background-image: url(https://yfo.spr.ru/price_img/2015-12/553987.jpg);
+    
+   
+}
+.foto9{
+    background-image: url(http://www.raves.com.my/images/blog/post1-420x280.jpg);
+    
+   
+}
+.foto10{
+    background-image: url(http://www.polyglottes-adom.com/uploads/media/news/0001/01/thumb_225_news_big.jpeg);
+    
+   
+}
+.foto11{
+    background-image: url(https://ereserve.com.au/wp-content/uploads/eReserve-Plus-benefits-everyone-at-an-academic-institution_734_6053666_0_14107389_1000-400x280.jpg);
+    
+   
+}
+.foto12{
+    background-image: url(https://cimt.com.ua/wp-content/uploads/2018/11/1489565072_higher-education-2-400x280.jpg);
+    
+   
+}
+.fot{
+    background-image: url(fot5.jpg);
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+.foto{
+    
+    
+    background-repeat: no-repeat;
+    padding-bottom: 80%;
+    padding-left:8% ;
+    padding-top: 10%;
+    position: relative;
+    border: 1px solid rgba(37, 22, 22, 0.521);
+    
+}
+.ft{
+    bottom: 10px;
+    
+    
+}
+.ft:hover{
+    color: rgb(78, 77, 77);
+}
+
+  
+    footer{
+        background-color: rgba(48, 34, 34, 0.479);
+    }
+    ul.hr {
+        margin: 0; /* Обнуляем значение отступов */
+        padding: 4px; /* Значение полей */
+       }
+       ul.hr li {
+        display: inline; /* Отображать как строчный элемент */
+       
+        padding: 3px; /* Поля вокруг текста */
+       }
+       ul.hr li a{
+           text-decoration: none;
+           color: rgb(218, 218, 218);
+       }
+       form {
+        position: relative;
+        width: 300px;
+        margin: 0 auto;
+      }
+      .d1 {background: #A3D0C3;}
+      .d1 input {
+        width: 100%;
+        height: 42px;
+        padding-left: 10px;
+        border: 2px solid #7BA7AB;
+        border-radius: 5px;
+        outline: none;
+        background: #F9F0DA;
+        color: #9E9C9C;
+      }
+      .d1 button {
+        position: absolute; 
+        top: 0;
+        right: 0px;
+        width: 42px;
+        height: 42px;
+        border: none;
+        background: rgb(90, 123, 126);
+        border-radius: 0 5px 5px 0;
+        cursor: pointer;
+      }
+      .d1 button:before {
+        content: "\f002";
+        font-family: FontAwesome;
+        font-size: 16px;
+        color: #F9F0DA;
+      }
+
+
+      #menu1{
+        position:relative;
+        display:block;
+        width:100%;
+        height:auto;
+        z-index:10;
+    }
+        #menu1 ul{
+            position:relative;
+            display:block;
+            margin:0px;
+            padding:0px;
+            width:100%;
+            height:auto;
+            list-style:none;
+            background:#F3A601;
+        }
+        #menu1 > ul::after{
+            display:block;
+            width:100%;
+            height:0px;
+            clear:both;
+            content:" ";
+        }
+            #menu1 ul li{
+                position:relative;
+                display:block;
+                float:left;
+                width:auto;
+                height:auto;
+            }
+                #menu1 ul li a{
+                    display:block;
+                    padding:9px 25px 0px 25px;
+                    font-size:14px;
+                    font-family:Arial, sans-serif;
+                    color:#ffffef;
+                    line-height:1.3em;
+                    text-decoration:none;
+                    font-weight:bold;
+                    text-transform:uppercase;
+                    height:36px;
+                    box-sizing:border-box;
+                }
+                #menu1 ul li > a:hover, #menu1 ul li:hover > a{
+                    background:#EBBD5B;
+                    color:#2B45E0;
+                }
+                #menu1 ul li ul{
+                    position:absolute;
+                    top:36px;
+                    left:0px;
+                    display:none;
+                    width:200px;
+                    background:#EBBD5B;
+                }
+                #menu1 ul li:hover ul{display:block;}/*эта строчка реализует механизм выпадения*/
+                    #menu1 ul li ul li{
+                        float:none;
+                        width:100%;
+                    }
+                        #menu1 ul li ul li a{
+                            display:block;
+                            text-transform:none;
+                            height:auto;
+                            padding:7px 25px;
+                            width:100%;
+                            box-sizing:border-box;
+                            border-top:1px solid #ffffff;
+                        }
+                        #menu1 ul li ul li:first-child a{border-top:0px;}
+                        #menu1 ul li ul li a:hover{
+                            background:#FDDC96;
+                            color:#6572BC;
+                        }
+
+@media only screen and (max-width: 600px) {
+    .foto{
+    
+    
+        background-repeat: no-repeat;
+        padding-bottom: 80%;
+        padding-left:8% ;
+        padding-top: 10%;
+        position: relative;
+        border: 1px solid rgba(37, 22, 22, 0.521);
+        
+    }
+
+  
+  .nav-item a {
+      font-size: 13px;
+  }
+  div h2{
+      font-size: 20px;
+  }
+  .fonone{
+      margin-top: 35px; 
+     
+     
+  }
+  .fontwo{
+   margin-top: 10px;
+   margin-left: 30px;
+      
+  }
+  .fontwo a{
+    border: 1px solid white;
+    font-size: 10px;
+    padding: 8px 10px;
+    color: rgb(255, 255, 255,0.8);
+    
+}
+.zagolovok h3{
+    font-size: 20px;
+
+}
+.zagolovokm h6{
+    font-size: 14px;
+
+}
+.gal{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+    grid-column-gap: 20px;
+    padding: 0 14%;
+    margin: 0 0px;
+}
+.filtr{
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+}
+.ft{
+    margin: 0;
+    padding: 0;
+    
+}
+.foto{
+    margin: 0;
+    background-color: rgba(49, 39, 38, 0.281);
+    border: 1px solid rgba(48, 35, 35, 0.2);
+   
+}
+.zagolovog{
+    align-items: center;
+   justify-content:center;
+    display: grid;
+    padding:10px;
+    margin-bottom:30px;
+    grid-template-columns: 1fr ;
+      grid-template-rows:1fr ;
+      margin-left: 15%;
+}
+.filtr{
+    margin: 0 auto;
+}
+.sortt{
+    margin-top: 15px;
+}
+
+
+
+
+}
+@media only screen and (max-width: 350px) {
+    .zagolovog{
+        align-items: center;
+       justify-content:center;
+        display: grid;
+        padding:10px;
+        margin-bottom:30px;
+        grid-template-columns: 1fr ;
+          grid-template-rows:1fr ;
+          margin-left: 0;
+         
+    }
+    .sortt{
+        margin-top: 15px;
+    }
+
+}
+
+@media (max-width:600px){
+.fonone h1{font-size:15px;}
+.foto{
+    
+    
+    background-repeat: no-repeat;
+    padding-bottom: 50%;
+    padding-left:8% ;
+    padding-top: 10%;
+    position: relative;
+    
+}
+
+}
+
+@media only screen and (min-width : 600px) and (max-width : 1026px) {
+    .gal{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      grid-template-rows:1fr 1fr ;
+      
+     grid-column-gap: 20%;
+    
+        padding-right: 7%;
+        margin-left: 120px;
+        margin-right: 16%;
+        margin-bottom: 8%;
+       
+        
+    }
+   
+   
+    
+ 
+  
+
+}
+
