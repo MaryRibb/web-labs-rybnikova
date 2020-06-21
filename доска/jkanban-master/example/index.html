@@ -12,11 +12,7 @@
     />
 
     <style>
-      body {
-        font-family: "Lato";
-        margin: 0;
-        padding: 0;
-      }
+     
 
       #myKanban {
         overflow-x: auto;
@@ -40,13 +36,36 @@
       }
     </style>
   </head>
-  <body>
-    <div>dklenl</div>
-    <div id="myKanban"></div>
+  <body class="page light-theme">
+    <div class="inp">
+    <div>
+      <h1>Канбан</h1>
+    </div>
+    <div>
+      <form name="test" method="post" action="input1.php">
+        <b>Добавить новую задачу</b><br>
+         <input type="text" size="40" placeholder="Описание">
+        
+         
+         
+       </form>
+       <div class="container" style="margin-left: 1050px; ">
+        
+        <button class="theme-button" type="button" >Изменить тему</button>
+      </div>
+    
+    </div>
+  </div>
+    <div id="myKanban">
+      
+    <button class="btn btn-success" id="addToDo" style="margin-left: 10px; margin-bottom: 10px;">Добавить</button></div>
     
 
-    <script src="../dist/jkanban.js"></script>
+    <script src="../dist/jkanban.js">
+    
+   </script>
     <script>
+      
       var KanbanTest = new jKanban({
         element: "#myKanban",
         gutter: "10px",
@@ -68,7 +87,7 @@
           var formItem = document.createElement("form");
           formItem.setAttribute("class", "itemform");
           formItem.innerHTML =
-            '<div class="form-group"><textarea class="form-control" rows="2" autofocus></textarea></div><div class="form-group"><button type="submit" class="btn btn-primary btn-xs pull-right">Submit</button><button type="button" id="CancelBtn" class="btn btn-default btn-xs pull-right">Cancel</button></div>';
+            '<div class="form-group"><textarea class="form-control" rows="2" autofocus></textarea></div><div class="form-group"><button type="submit" class="btn btn-primary btn-xs pull-right">Добавить</button><button type="button" id="CancelBtn" class="btn btn-default btn-xs pull-right">Удалить</button></div>';
 
           KanbanTest.addForm(boardId, formItem);
           formItem.addEventListener("submit", function(e) {
@@ -87,13 +106,13 @@
         boards: [
           {
             id: "_todo",
-            title: "To Do (Can drop item only in working)",
+            title: "План:",
             class: "info,good",
             dragTo: ["_working"],
             item: [
               {
                 id: "_test_delete",
-                title: "Try drag this (Look the console)",
+                title: "Первое",
                 drag: function(el, source) {
                   console.log("START DRAG: " + el.dataset.eid);
                 },
@@ -105,7 +124,7 @@
                 }
               },
               {
-                title: "Try Click This!",
+                title: "Второе",
                 click: function(el) {
                   alert("click");
                 },
@@ -115,28 +134,28 @@
           },
           {
             id: "_working",
-            title: "Working (Try drag me too)",
+            title: "В работе:",
             class: "warning",
             item: [
               {
-                title: "Do Something!"
+                title: "Первое"
               },
               {
-                title: "Run?"
+                title: "Второе"
               }
             ]
           },
           {
             id: "_done",
-            title: "Done (Can drop item only in working)",
+            title: "Готово:",
             class: "success",
             dragTo: ["_working"],
             item: [
               {
-                title: "All right"
+                title: "Первое"
               },
               {
-                title: "Ok!"
+                title: "Второе"
               }
             ]
           }
@@ -146,7 +165,7 @@
       var toDoButton = document.getElementById("addToDo");
       toDoButton.addEventListener("click", function() {
         KanbanTest.addElement("_todo", {
-          title: "Test Add"
+          title: "Привет"
         });
       });
 
@@ -185,6 +204,17 @@
       allEle.forEach(function(item, index) {
         //console.log(item);
       });
+    </script>
+    <script >
+  window.onload = function() {
+let page = document.querySelector('.page');
+let themeButton = document.querySelector('.theme-button');
+themeButton.onclick = function() {
+
+page.classList.toggle('light-theme');
+page.classList.toggle('dark-theme')
+};
+} 
     </script>
   </body>
 </html>
