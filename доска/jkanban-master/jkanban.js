@@ -55,6 +55,7 @@ var dragula = require("dragula");
       click: function(el) {},
       buttonClick: function(el, boardId) {}
     };
+    
 
     if (arguments[0] && typeof arguments[0] === "object") {
       this.options = __extendDefaults(defaults, arguments[0]);
