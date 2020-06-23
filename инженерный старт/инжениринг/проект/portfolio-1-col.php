@@ -23,17 +23,17 @@
   <!-- Navigation -->
   <nav class="navbar fixed-top navbar-expand-lg navbar-dark  fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="index.html">Современный взгляд</a>
+      <a class="navbar-brand" href="index.php">Современный взгляд</a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="about.html">Конкурсы</a>
+            <a class="nav-link" href="about.php">Конкурсы</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link " href="services.html">Инструкция</a>
+            <a class="nav-link " href="services.php">Инструкция</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="contact.php">Подать заявку</a>
@@ -70,73 +70,51 @@
     </ol>
 
     <!-- Project One -->
-    <div class="row">
-      <div class="col-md-7">
-        <a href="#">
-          <img class="img-fluid rounded mb-3 mb-md-0" src="http://detskiy-mir.beerot.ru/wp-content/uploads/sites/2/2014/09/אא.jpg" alt="">
+    <?php
+    
+    // осуществляем подключение к базе данных
+    $mysqli = mysqli_connect('localhost', 'mysql', 'mysql', 'injener');
+    if( mysqli_connect_errno() ) // проверяем корректность подключения
+    return 'Ошибка подключения к БД: '.mysqli_connect_error();
+    // формируем и выполняем SQL-запрос для определения числа записей
+    $sql_res=mysqli_query($mysqli, 'SELECT COUNT(*) FROM rabota');
+    // проверяем корректность выполнения запроса и определяем его результат
+    if( !mysqli_errno($mysqli) && $row=mysqli_fetch_row($sql_res) )
+    {
+         if(!$TOTAL=$row[0] ) // если в таблице нет записей
+             return 'В таблице нет данных'; // возвращаем сообщение
+         $PAGES = ceil($TOTAL/10); // вычисляем общее количество страниц
+         
+         
+         
+        
+         $sql_res = mysqli_query($mysqli,'SELECT id, img,glavn,text FROM rabota');
+          // строка с будущим контентом страницы
+        
+         while( $row=mysqli_fetch_assoc($sql_res) ) // пока есть записи
+         {
+            // выводим каждую запись как строку таблицы
+                $ret.="
+    <div class='row'>
+      <div class='col-md-7'>
+        <a href=#'>
+          <img class='img-fluid rounded mb-3 mb-md-0' src='".$row['img']."' >
         </a>
       </div>
-      <div class="col-md-5">
-        <h3>Чудесный мир</h3>
-        <p>Даты проведения: 16 мая - 1 июня 2020</p>
+      <div class='col-md-5'>
+        <h3>".$row['glavn']."</h3>
+        <p>".$row['text']."</p>
         
       </div>
-    </div>
-    <!-- /.row -->
-
-    <hr>
-
-    <!-- Project Two -->
-    <div class="row">
-      <div class="col-md-7">
-        <a href="#">
-          <img class="img-fluid rounded mb-3 mb-md-0" src="https://www.factruz.ru/mystic/images/rite-pancake.jpg" alt="">
-        </a>
-      </div>
-      <div class="col-md-5">
-        <h3>Зимняя ярмарка</h3>
-        <p>Даты проведения: 16 мая - 1 июня 2020</p>
-        
-      </div>
-    </div>
-    <!-- /.row -->
-
-    <hr>
-
-    <!-- Project Three -->
-    <div class="row">
-      <div class="col-md-7">
-        <a href="#">
-          <img class="img-fluid rounded mb-3 mb-md-0" src="https://img0.liveinternet.ru/images/attach/d/0/141/818/141818606_d469e396cd1cb5de5a27eeb113drkartinyipannoyarkayakartinamaslomletovesnaraznotsvetn.jpg" alt="">
-        </a>
-      </div>
-      <div class="col-md-5">
-        <h3>Цветочная поляна</h3>
-        <p>Даты проведения: 16 мая - 1 июня 2020</p>
-        
-      </div>
-    </div>
-    <!-- /.row -->
-
-    <hr>
-
-    <!-- Project Four -->
-    <div class="row">
-
-      <div class="col-md-7">
-        <a href="#">
-          <img class="img-fluid rounded mb-3 mb-md-0" src="http://25-k.com/datas/users/1270-blog_belladonna_5.jpg" alt="">
-        </a>
-      </div>
-      <div class="col-md-5">
-        <h3>Женская ягода</h3>
-        <p>Даты проведения: 16 мая - 1 июня 2020</p>
-        
-      </div>
-    </div>
-    <!-- /.row -->
-
-    <hr>
+    </div><hr>";
+                }
+         // заканчиваем формирование таблицы с контентом
+         
+         echo $ret; // возвращаем сформированный контент
+          }
+           // если запрос выполнен некорректно
+     
+?>
 
     <!-- Pagination -->
     <ul class="pagination justify-content-center">
