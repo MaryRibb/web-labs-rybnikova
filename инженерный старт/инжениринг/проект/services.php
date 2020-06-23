@@ -23,7 +23,7 @@
   <!-- Navigation -->
   <nav class="navbar fixed-top navbar-expand-lg navbar-dark  fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="index.html">Современный взгляд</a>
+      <a class="navbar-brand" href="index.php">Современный взгляд</a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -33,7 +33,7 @@
             <a class="nav-link" href="about.php">Конкурсы</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="services.html">Инструкция</a>
+            <a class="nav-link active" href="services.php">Инструкция</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="contact.php">Подать заявку</a>
@@ -75,37 +75,51 @@
 
     <!-- Marketing Icons Section -->
     <div class="row">
-      <div class="col-lg-4 mb-4">
-        <div class="card h-100">
-          <h4 class="card-header">Шаг 1 - Ознакомьтесь с положением конкурса</h4>
-          <div class="card-body">
-            <p class="card-text">На сайте представлены различные творческие дисциплины. Выберите интересующую вас и посмотрите актуальные конкурсные проекты по ней.</p>
-          </div>
+    <?php
+    
+    // осуществляем подключение к базе данных
+    $mysqli = mysqli_connect('localhost', 'mysql', 'mysql', 'injener');
+    if( mysqli_connect_errno() ) // проверяем корректность подключения
+    return 'Ошибка подключения к БД: '.mysqli_connect_error();
+    // формируем и выполняем SQL-запрос для определения числа записей
+    $sql_res=mysqli_query($mysqli, 'SELECT COUNT(*) FROM servis');
+    // проверяем корректность выполнения запроса и определяем его результат
+    if( !mysqli_errno($mysqli) && $row=mysqli_fetch_row($sql_res) )
+    {
+         if(!$TOTAL=$row[0] ) // если в таблице нет записей
+             return 'В таблице нет данных'; // возвращаем сообщение
+         $PAGES = ceil($TOTAL/10); // вычисляем общее количество страниц
          
+         
+         
+        
+         $sql_res = mysqli_query($mysqli,'SELECT id, namber,glavn,text FROM servis');
+          // строка с будущим контентом страницы
+        
+         while( $row=mysqli_fetch_assoc($sql_res) ) // пока есть записи
+         {
+            // выводим каждую запись как строку таблицы
+                $ret.="
+    <div class='col-lg-4 mb-4'>
+      <div class='card h-100 '>
+      <h4 class='card-header'>Шаг ".$row['namber']." - ".$row['glavn']."</h4>
+      <div class='card-body'>
+       
+        <p class='card-text'>".$row['text']."</p>
         </div>
       </div>
-      <div class="col-lg-4 mb-4">
-        <div class="card h-100">
-          <h4 class="card-header">Шаг 2 - Корректно оформите материал</h4>
-          <div class="card-body">
-            <p class="card-text">Конкурсное выступление должно быть опубликовано на сайте /www.youtube.com/ .
-
-              Отправляя ссылку на видеозапись, участник конкурса автоматически подтверждает свое согласие на использование материала третьими лицами , а также для размещения видеозаписи на сайте организатора.</p>
-          </div>
-          
-        </div>
-      </div>
-      <div class="col-lg-4 mb-4">
-        <div class="card h-100">
-          <h4 class="card-header">Шаг 3 - Отправьте заявку на нащем сайте</h4>
-          <div class="card-body">
-            <p class="card-text">Все необходимая информация для заполнения полей формы, в т.ч. ссылка на YouTube / Файлообменник должна быть внесена корректно. В случае предоставления ошибочных сведений ответственность лежит на участнике конкурса.</p>
-          </div>
-          
-        </div>
-      </div>
-    </div>
+    </div>";
+                }
+         // заканчиваем формирование таблицы с контентом
+        
+         echo $ret; // возвращаем сформированный контент
+          }
+           // если запрос выполнен некорректно
+     
+?>
+     
     <!-- /.row -->
+        </div>
 
   </div>
   <!-- /.container -->

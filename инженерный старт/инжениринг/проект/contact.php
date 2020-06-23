@@ -24,27 +24,27 @@
  <!-- Navigation -->
  <nav class="navbar fixed-top navbar-expand-lg navbar-dark  fixed-top">
   <div class="container">
-    <a class="navbar-brand" href="index.html">Современный взгляд</a>
+    <a class="navbar-brand" href="index.php">Современный взгляд</a>
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-          <a class="nav-link" href="about.html">Конкурсы</a>
+          <a class="nav-link" href="about.php">Конкурсы</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link " href="services.html">Инструкция</a>
+          <a class="nav-link " href="services.php">Инструкция</a>
         </li>
         <li class="nav-item">
           <a class="nav-link active" href="contact.php">Подать заявку</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle " href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Порфолио работ
+            Портфолио работ
           </a>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
-            <a class="dropdown-item" href="portfolio-1-col.html">Художественный конкурс</a>
+            <a class="dropdown-item" href="portfolio-1-col.php">Художественный конкурс</a>
             
           </div>
         </li>
@@ -76,46 +76,17 @@
 
     <!-- Contact Form -->
     <!-- In order to set the email address and subject line for the contact form go to the bin/contact_me.php file. -->
-    <div class="row">
-      <div class="col-lg-8 mb-4">
-        <h3>Регистрация</h3>
-        <form name="sentMessage" id="contactForm" novalidate>
-          <div class="control-group form-group">
-            <div class="controls">
-              <label>Имя:</label>
-              <input type="text" class="form-control" id="name" required data-validation-required-message="Please enter your name.">
-              <p class="help-block"></p>
-            </div>
-          </div>
-          <div class="control-group form-group">
-            <div class="controls">
-              <label>Тип конкурса:</label>
-              <input type="tel" class="form-control" id="type" required data-validation-required-message="Please enter your phone number.">
-            </div>
-          </div>
-          <div class="control-group form-group">
-            <div class="controls">
-              <label>E-mail:</label>
-              <input type="email" class="form-control" id="email" required data-validation-required-message="Please enter your email address.">
-            </div>
-          </div>
-          <div class="control-group form-group">
-            <div class="controls">
-              <label>Текст:</label>
-              <textarea rows="6" cols="50" class="form-control" id="message" required data-validation-required-message="Please enter your message" maxlength="50" style="resize:none"></textarea>
-            </div>
-          </div>
-          <div id="success"></div>
-          <!-- For success/fail messages -->
-          <button type="submit" class="btn btn-primary" id="sendMessageButton">Отправить</button>
-        </form>
-      </div>
-
-    </div>
-    <!-- /.row -->
+    <?php  
+    require 'tcont.php';
+     // главное меню  
+    ?>
     <div class="row">
       <div class="col-lg-8 mb-4">
         <h3>Все заявки</h3>
+        <?php
+        require 'eddel.php';
+
+         ?>
         
       </div>
 
@@ -123,7 +94,7 @@
 
   </div>
   <!-- /.container -->
-
+</div>
   <!-- Footer -->
   <footer class="py-5 bg-dark">
     <div class="container">
@@ -132,15 +103,17 @@
     <!-- /.container -->
   </footer>
 
-  <!-- Bootstrap core JavaScript -->
-  <script src="js/jquery.min.js"></script>
-  <script src="js/bootstrap.bundle.min.js"></script>
 
-  <!-- Contact form JavaScript -->
-  <!-- Do not edit these files! In order to set the email address and subject line for the contact form go to the bin/contact_me.php file. -->
-  <script src="js/jqBootstrapValidation.js"></script>
-  <script src="js/contact_me.js"></script>
+
+  <script src='js/jquery.min.js'></script>
+  <script src='js/bootstrap.bundle.min.js'></script>
+
+  
+  <script src='js/jqBootstrapValidation.js'></script>
+  <script src='js/contact_me.js'></script>
 
 </body>
 
 </html>
+
+

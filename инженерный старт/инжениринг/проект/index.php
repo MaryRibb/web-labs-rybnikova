@@ -1,9 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-
-  <meta charset="utf-8">
+<meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
@@ -24,7 +19,7 @@
   <!-- Navigation -->
   <nav class="navbar fixed-top navbar-expand-lg navbar-dark  fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="index.html">Современный взгляд</a>
+      <a class="navbar-brand" href="index.php">Современный взгляд</a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -139,93 +134,119 @@
     <h2 style=" text-align: center; color: rgb(230, 50, 50);">Члены жюри дистанционного конкурса </h2>
 
     <div class="row">
-      <div class="col-lg-4 col-sm-6 portfolio-item">
-        <div class="card h-100">
-          <a href="#"><img class="card-img-top" src="img/j1.jpg" alt=""></a>
-          <div class="card-body">
-            <h4 class="card-title">
-              <a href="#">Александр Карпов</a>
-            </h4>
-            <p class="card-text">кандидат культурологии, доцент кафедры искусствоведения Санкт-Петербургской академии имени А. Л. Штиглица, член Ассоциации искусствоведов</p>
-          </div>
-        </div>
+    <?php
+    
+    // осуществляем подключение к базе данных
+    $mysqli = mysqli_connect('localhost', 'mysql', 'mysql', 'injener');
+    if( mysqli_connect_errno() ) // проверяем корректность подключения
+    return 'Ошибка подключения к БД: '.mysqli_connect_error();
+    // формируем и выполняем SQL-запрос для определения числа записей
+    $sql_res=mysqli_query($mysqli, 'SELECT COUNT(*) FROM juri');
+    // проверяем корректность выполнения запроса и определяем его результат
+    if( !mysqli_errno($mysqli) && $row=mysqli_fetch_row($sql_res) )
+    {
+         if(!$TOTAL=$row[0] ) // если в таблице нет записей
+             return 'В таблице нет данных'; // возвращаем сообщение
+         $PAGES = ceil($TOTAL/10); // вычисляем общее количество страниц
+         
+         
+         
+        
+         $sql_res = mysqli_query($mysqli,'SELECT id, img,glavn,text FROM juri');
+          // строка с будущим контентом страницы
+        
+         while( $row=mysqli_fetch_assoc($sql_res) ) // пока есть записи
+         {
+            // выводим каждую запись как строку таблицы
+                $ret.="
+    
+    
+    <div class='col-lg-4 col-sm-6 portfolio-item'>
+    <div class='card h-100'>
+      <a href='#'><img class='card-img-top' src='".$row['img']."' ></a>
+      <div class='card-body'>
+        <h4 class='card-title'>
+          <a href='#'>".$row['glavn']."</a>
+        </h4>
+        <p class='card-text'>".$row['text']."</p>
       </div>
-      <div class="col-lg-4 col-sm-6 portfolio-item">
-        <div class="card h-100">
-          <a href="#"><img class="card-img-top" src="img/j2.jpg" alt=""></a>
-          <div class="card-body">
-            <h4 class="card-title">
-              <a href="#">Александра Ельчанинова</a>
-            </h4>
-            <p class="card-text">куратор Лаборатории современного танца Галереи современного искусства Государственного музея изобразительных искусств РТ</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-sm-6 portfolio-item">
-        <div class="card h-100">
-          <a href="#"><img class="card-img-top" src="img/j3.jpg" alt=""></a>
-          <div class="card-body">
-            <h4 class="card-title">
-              <a href="#">Лилия Тагирова</a>
-            </h4>
-            <p class="card-text">композитор, поэт, член Союза композиторов России и Республики Татарстан, автор песен для конкурса «Детское Евровидение»</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-sm-6 portfolio-item">
-        <div class="card h-100">
-          <a href="#"><img class="card-img-top" src="img/j4.jpg" alt=""></a>
-          <div class="card-body">
-            <h4 class="card-title">
-              <a href="#">Павел Густов</a>
-            </h4>
-            <p class="card-text">преподаватель актёрского мастерства, актёр Казанского государственного театра юного зрителя, заслуженный артист Республики Татарстан</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-sm-6 portfolio-item">
-        <div class="card h-100">
-          <a href="#"><img class="card-img-top" src="img/j5.jpg" alt=""></a>
-          <div class="card-body">
-            <h4 class="card-title">
-              <a href="#">Элла Хрусталева</a>
-            </h4>
-            <p class="card-text">главный пейзажист Северо-Западного округа войск Национальной Гвардии Российский Федерации</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-sm-6 portfolio-item">
-        <div class="card h-100">
-          <a href="#"><img class="card-img-top" src="img/j6.jpg" alt=""></a>
-          <div class="card-body">
-            <h4 class="card-title">
-              <a href="#">Роман Писарюк</a>
-            </h4>
-            <p class="card-text">руководитель и главный режиссёр Молодёжного Сочинского Театра, преподаватель театральных дисциплин ГИТИС (Москва)</p>
-          </div>
-        </div>
-      </div>
+    </div>
+  </div>
+    ";
+                }
+         // заканчиваем формирование таблицы с контентом
+        
+         echo $ret; // возвращаем сформированный контент
+          }
+           // если запрос выполнен некорректно
+     
+?>
+
+     
     </div>
     <!-- /.row -->
 
     <!-- Features Section -->
-    <div class="row">
-      <div class="col-lg-6">
-        <h2>Работа победителя 2019 года</h2>
+    <h2>Работа победителей 2019 года</h2>
+        <?php
+    
+            // осуществляем подключение к базе данных
+            $mysqli = mysqli_connect('localhost', 'mysql', 'mysql', 'injener');
+            if( mysqli_connect_errno() ) // проверяем корректность подключения
+            return 'Ошибка подключения к БД: '.mysqli_connect_error();
+            // формируем и выполняем SQL-запрос для определения числа записей
+            $sql_res=mysqli_query($mysqli, 'SELECT COUNT(*) FROM win');
+            // проверяем корректность выполнения запроса и определяем его результат
+            if( !mysqli_errno($mysqli) && $row=mysqli_fetch_row($sql_res) )
+            {
+                if(!$TOTAL=$row[0] ) // если в таблице нет записей
+                    return 'В таблице нет данных'; // возвращаем сообщение
+                $PAGES = ceil($TOTAL/10); // вычисляем общее количество страниц
+                
+                
+                
+                
+                $sql_res = mysqli_query($mysqli,'SELECT id, name,old,tema,text,img FROM win');
+                // строка с будущим контентом страницы
+                
+                while( $row=mysqli_fetch_assoc($sql_res) ) // пока есть записи
+                {
+                    // выводим каждую запись как строку таблицы
+                        $rat.=" <hr><div class='row' style='margin-bottom=10px;'>
+      
+                      
+                        <div class='col-lg-6'> 
+                        
+            <ul>
+          
+            <li>".$row['name']."</li>
+            <li>".$row['old']."</li>
+            <li>".$row['tema']."</li>
+            
+          </ul>
+          <p>".$row['text']."</p>
+        </div>
+        <hr>
+        <div class='col-lg-6'>
         
-        <ul>
+          <img class='img-fluid rounded' src='".$row['img']."' >
+          </div>
+          </div>
           
-          <li>Юлия Самойлова</li>
-          <li>16 лет</li>
-          <li>Тема "Неземная любовь"</li>
-          
-        </ul>
-        <p>Девочка в таком юном возрасте смогла передать все эмоции всего лишь с помощью кисти и холса.Её картина смогла покорить даже самого строгого члена жюри.</p>
-      </div>
-      <div class="col-lg-6">
-        <img class="img-fluid rounded" src="https://lh3.googleusercontent.com/proxy/1x6OKqofWmh4qFymnSBGj0j4ZsNh38gEnC7BLmKRu4sUbCWckGWL6gcypI1hx2MHR93AYBjgOfLWYB7CBPhEF1pd8AvYvAY5Cw=w1200-h630-p-k-no-nu" alt="">
-      </div>
+        
+            ";
+                        }
+                // заканчиваем формирование таблицы с контентом
+                
+                echo $rat; // возвращаем сформированный контент
+                }
+                // если запрос выполнен некорректно
+            
+        ?>
+
+              </div>
     </div>
+              </div>
     <!-- /.row -->
 
     <hr>
