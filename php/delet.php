@@ -7,7 +7,7 @@
 </head>
 <body>
   <h1>Сессия закрыта</h1>
-  <a href="admin.php">Создать сессию</a>
+  
 </body>
 </html>
 <? session_destroy() ?>

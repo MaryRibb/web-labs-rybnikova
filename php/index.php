@@ -28,7 +28,7 @@
 </div>
 
 <div>
-<a href="admin.php">Пройти тест</a>
+<a href="viu.php">Пройти тест</a>
 </div>
 
 
