@@ -27,6 +27,10 @@
     </form>
 </div>
 
+<div>
+<a href="admin.php">Пройти тест</a>
+</div>
+
 
 
 		</main>
