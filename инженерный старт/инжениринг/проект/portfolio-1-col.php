@@ -78,6 +78,7 @@
     return 'Ошибка подключения к БД: '.mysqli_connect_error();
     // формируем и выполняем SQL-запрос для определения числа записей
     $sql_res=mysqli_query($mysqli, 'SELECT COUNT(*) FROM rabota');
+   
     // проверяем корректность выполнения запроса и определяем его результат
     if( !mysqli_errno($mysqli) && $row=mysqli_fetch_row($sql_res) )
     {
@@ -115,6 +116,19 @@
            // если запрос выполнен некорректно
      
 ?>
+<?php
+$mysqli = mysqli_connect('localhost', 'mysql', 'mysql', 'injener');
+if( mysqli_connect_errno() ) // проверяем корректность подключения
+return 'Ошибка подключения к БД: '.mysqli_connect_error();
+// формируем и выполняем SQL-запрос для определения числа записей
+$sql_res=mysqli_query($mysqli, 'SELECT COUNT(*) FROM rabota');
+
+$row = mysqli_fetch_row($sql_res);
+$total = $row[0]; // всего записей
+echo "Всего работ:$total";
+
+?>
+
 
     <!-- Pagination -->
     <ul class="pagination justify-content-center">

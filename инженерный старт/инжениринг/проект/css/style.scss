@@ -1,0 +1,65 @@
+$font-stack:    Helvetica, sans-serif;
+$color:  rgb(255, 255, 255);
+$border: 2px solid white;
+$fifteen: 15px;
+$none: none;
+
+h2 {
+  
+    @include trans(rgba(255, 255, 255, 0.9));
+    padding-top: 10px;
+  
+  }
+  
+  a {
+    @include trans(rgba(255, 255, 255, 0.9));
+    text-decoration: $none;
+  }
+  .ft {
+    padding-top: 180px/10px * 10%;
+    padding-bottom: 4%;
+  }
+  h1,
+  p {
+      font-size: 20px;
+  }
+
+  article ul li {
+      font-size: $fifteen;
+  }
+
+  article p {
+      font-size: $fifteen;
+  }
+
+  aside {
+      border-top: $border;
+      border-bottom: $border;
+  }
+
+  .right {
+
+      border-bottom: $border;
+  }
+  h1,
+  p {
+      font-size: 20px;
+  }
+
+  article ul li {
+      font-size: $fifteen;
+  }
+
+  article p {
+      font-size: $fifteen;
+  }
+
+  aside {
+      border-top: $border;
+      border-bottom: $border;
+  }
+
+  .right {
+
+      border-bottom: $border;
+  }  
