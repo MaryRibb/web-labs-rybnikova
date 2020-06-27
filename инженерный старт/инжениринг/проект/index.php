@@ -181,6 +181,18 @@
            // если запрос выполнен некорректно
      
 ?>
+<?php
+$mysqli = mysqli_connect('localhost', 'mysql', 'mysql', 'injener');
+if( mysqli_connect_errno() ) // проверяем корректность подключения
+return 'Ошибка подключения к БД: '.mysqli_connect_error();
+// формируем и выполняем SQL-запрос для определения числа записей
+$sql_res=mysqli_query($mysqli, 'SELECT COUNT(*) FROM juri');
+
+$row = mysqli_fetch_row($sql_res);
+$total = $row[0]; // всего записей
+echo "<div class='col-lg-4 col-sm-6 portfolio-item'>Всего членов жюри:<b>$total</b> </div>";
+
+?>
 
      
     </div>
