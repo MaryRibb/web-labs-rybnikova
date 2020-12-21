@@ -33,7 +33,7 @@ var dragula = require("dragula");
     this.drake = "";
     this.drakeBoard = "";
     this.addItemButton = false;
-    this.buttonContent = "+";
+    this.buttonContent = "Добавить";
     this.itemHandleOptions = __DEFAULT_ITEM_HANDLE_OPTIONS;
     var defaults = {
       element: "",
@@ -45,7 +45,7 @@ var dragula = require("dragula");
       dragBoards: true,
       dragItems: true, //whether can drag cards or not, useful when set permissions on it.
       addItemButton: false,
-      buttonContent: "+",
+      buttonContent: "Добавить",
       itemHandleOptions: __DEFAULT_ITEM_HANDLE_OPTIONS,
       dragEl: function(el, source) {},
       dragendEl: function(el) {},
