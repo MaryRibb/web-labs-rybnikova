@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "lab11": {
+    "project11": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/lab11",
+            "outputPath": "dist/project11",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -25,8 +25,10 @@
             ],
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              
               "src/styles.css"
-
+          
+              
             ],
             "scripts": []
           },
@@ -63,18 +65,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "lab11:build"
+            "browserTarget": "project11:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "lab11:build:production"
+              "browserTarget": "project11:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "lab11:build"
+            "browserTarget": "project11:build"
           }
         },
         "test": {
@@ -111,19 +113,19 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "lab11:serve"
+            "devServerTarget": "project11:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "lab11:serve:production"
+              "devServerTarget": "project11:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "lab11",
+  "defaultProject": "project11",
   "cli": {
-    "analytics": false
+    "analytics": "03ed948a-35bf-4fd0-95fd-58daff5d9498"
   }
 }
