@@ -1,0 +1,28 @@
+<form [formGroup]="changeform">
+    <div class="d-none " [id]="id">
+        <input type="text" class="form-control" placeholder="Имя" formControlName="name" />
+        <input type="text" class="form-control" placeholder="Фамилия" formControlName="surname" />
+
+
+        <input type="tel" class="form-control" placeholder="Телефон" formControlName="phone" [textMask]="{mask: mask}" />
+
+        <select formControlName="type" class="custom-select">
+            <option [ngValue]="myWorkerType.programmer" >Программист</option>
+            <option [ngValue]="myWorkerType.designer">Дизайнер</option>
+            <option [ngValue]="myWorkerType.copywriter">Рекламщик</option>
+            <option [ngValue]="myWorkerType.manager">Менеджер</option>
+    </select>
+  
+          <input type="hidden" [(ngModel)]="id" [ngModelOptions]="{standalone: true}" />
+  
+  
+          <button [disabled]="changeform.controls['name'].invalid || changeform.controls['surname'].invalid || changeform.controls['phone'].invalid || changeform.controls['type'].invalid" class="btn btn-outline-primary btn-sm" (click)="onEditWorker()">Редактировать</button>
+      </div>
+  </form>
+
+  
+               
+       
+
+  
+

@@ -1,0 +1,33 @@
+<div class="d-none" [id]="id">
+    
+    
+    <div class="col-4 mb-3">
+        <input type="text" class="form-control" 
+        placeholder="Имя"
+        [(ngModel)]="name">
+    </div>
+    <div class="col-4 mb-3">
+        <input type="text" class="form-control"
+        placeholder="Фамилия"
+        [(ngModel)]="surname">
+        
+    </div>
+
+     
+
+    <select class="custom-select col-4 mb-3" [(ngModel)]="type">
+                      <option [ngValue]="myWorkerType.programmer">Программист</option>
+                      <option [ngValue]="myWorkerType.designer">Дизайнер</option>
+                      <option [ngValue]="myWorkerType.copywriter">Рекламщик</option>
+                      <option [ngValue]="myWorkerType.manager">Менеджер</option>
+                    </select>
+                    <br>
+               
+       
+
+    <button class="btn btn-outline-success btn-sm " (click)="onEditWorker()">Редактировать</button>
+        
+
+        
+    </div>
+
