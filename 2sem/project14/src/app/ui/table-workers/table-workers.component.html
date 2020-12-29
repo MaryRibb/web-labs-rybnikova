@@ -1,0 +1,44 @@
+<div class="row pl-3" *ngIf="workers.length>0">
+    <div class="col-12">
+        <h5>{{title}}</h5>
+    </div>
+
+<table class="table" [style.width]="'98%'">
+    <thead>
+      <tr>
+        <th  >id</th>
+        <th  >Имя</th>
+        <th >Фамилия</th>
+        <th  >Телефон</th>
+        <th  ></th>
+        <th  ></th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let worker of workers">
+        <th scope="row">{{worker.id}}</th>
+        <td>{{worker.name}}</td>
+        <td>{{worker.surname}}</td>
+        <td>{{worker.phone}}</td>
+        <td>
+            <button (click) ="onDeleteWorker(worker.id)" class="btn btn-outline-danger btn-sm">
+                Удалить</button>
+            </td>
+            <td>
+                <button type="button" class="btn btn-outline-success btn-sm" (click)="showForm(worker.id)">
+                    Редактировать
+                  </button>
+                
+      
+    </td>
+</tr>
+      
+    </tbody>
+  </table>
+
+  
+</div>
+<app-change-workers *ngFor="let worker of workers" (editWorker)="onEditWorker($event)" [id]="worker.id" [name]="worker.name" [surname]="worker.surname" [type]="worker.type" [phone]="worker.phone">
+        
+</app-change-workers>
