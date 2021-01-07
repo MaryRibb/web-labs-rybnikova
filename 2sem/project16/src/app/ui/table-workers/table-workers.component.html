@@ -1,0 +1,58 @@
+<div ng-controller="ExampleController" class="row pl-3" *ngIf="workers.length>0">
+    <div class="col-12">
+        <h5>{{title}}</h5>
+        
+
+    </div>
+    
+
+<table class="table" >
+    <thead>
+      <tr>
+        <th  ><button  (click)='reverseSortID()'>id</button>
+          
+        </th>
+        <th  >Имя</th>
+        <th >Фамилия</th>
+        <th >Отчество</th>
+        <th  >Телефон</th>
+        <th  >Emil</th>
+        <th  ><button  (click)='reverseSortBirthday()'>Дата рождения</button>
+         
+        </th>
+        
+        <th  ></th>
+        <th  ></th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let worker of workers | myfilter:searchStr  |idfilt:sorting:direction ">
+        <th scope="row">{{worker.id}}</th>
+        <td>{{worker.name}}</td>
+        <td>{{worker.surname}}</td>
+        <td>{{worker.middlename}}</td>
+        <td>{{worker.phone}}</td>
+        <td>{{worker.email}}</td>
+        <td>{{worker.birthday}}</td>
+        <td>
+            <button (click) ="onDeleteWorker(worker.id)" class="btn btn-outline-danger btn-sm">
+                Удалить</button>
+            </td>
+            <td>
+                <button type="button" class="btn btn-outline-success btn-sm" (click)="showForm(worker.id)">
+                    Редактировать
+                  </button>
+                
+      
+    </td>
+</tr>
+      
+    </tbody>
+  </table>
+
+  
+</div>
+<app-change-workers *ngFor="let worker of workers"  (firstDeleteWorker)="onDeleteWorker($event)" (editWorker)="onEditWorker($event)" [id]="worker.id" [name]="worker.name" [surname]="worker.surname"  [middlename]="worker.middlename"  [type]="worker.type" [phone]="worker.phone" [birthday]="worker.birthday" [email]="worker.email">
+        
+</app-change-workers>

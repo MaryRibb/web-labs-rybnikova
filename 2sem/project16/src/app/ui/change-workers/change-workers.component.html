@@ -1,0 +1,33 @@
+<form [formGroup]="changeform">
+    <div class="d-none " [id]="id">
+        <input type="text" class="form-control" placeholder="Имя" formControlName="name"   [(ngModel)]="name"/>
+        <input type="text" class="form-control" placeholder="Фамилия" formControlName="surname" [(ngModel)]="surname" />
+
+        <input  class=" mb-2"type="text" class="form-control" placeholder="Отчество" formControlName="middlename" [(ngModel)]="middlename" />
+        <input class=" mt-2" type="tel" class="form-control" placeholder="Телефон" formControlName="phone" [textMask]="{mask: mask}" [(ngModel)]="phone" />
+        <input  class=" mt-2" type="email" class="form-control" placeholder="Email" formControlName="email" [(ngModel)]="email" />
+        <input  class=" mt-2"type="text" class="form-control" placeholder="Дата рождения" formControlName="birthday" [(ngModel)]="birthday" />
+        <select formControlName="type" class="custom-select">
+            <option [ngValue]="myWorkerType.programmer" >IT отдел </option>
+            <option [ngValue]="myWorkerType.sales">Отдел продаж</option>
+            <option [ngValue]="myWorkerType. delivery">Отдел доставки</option>
+            <option [ngValue]="myWorkerType.lawyer">Юридический отдел</option>
+    </select>
+  
+          <input type="hidden" [(ngModel)]="id" [ngModelOptions]="{standalone: true}" />
+  
+  
+         
+          <button [disabled]="changeform.controls['name'].invalid || changeform.controls['surname'].invalid || changeform.controls['middlename'].invalid ||  changeform.controls['phone'].invalid || changeform.controls['type'].invalid || changeform.controls['birthday'].invalid || changeform.controls['email'].invalid" class="btn btn-outline-primary btn-sm" (click)="onEditWorker()">Редактировать</button>
+          <button class="btn btn-outline-danger btn-sm" (click)="onDeleteWorker(id)">
+            Удалить
+          </button>
+        </div>
+  </form>
+
+  
+               
+       
+
+  
+

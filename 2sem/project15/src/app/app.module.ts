@@ -12,6 +12,7 @@ import { ChangeWorkersComponent } from './ui/change-workers/change-workers.compo
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { EditComponent } from './ui/edit/edit.component';
 import { HttpClientModule }   from '@angular/common/http';
+import { MyfilterPipe } from './shared/pipes/myfilter.pipe';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { HttpClientModule }   from '@angular/common/http';
     TableWorkersComponent,
     AddformWorkerComponent,
     ChangeWorkersComponent,
-    EditComponent
+    EditComponent,
+    MyfilterPipe
     
   ],
   imports: [

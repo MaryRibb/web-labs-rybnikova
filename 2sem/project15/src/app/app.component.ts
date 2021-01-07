@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Input,Component } from '@angular/core';
 import { MyFirstService } from './shared/services/my-first.service';
+
 
 
 import { MyWorker,  MyWorkerType } from './shared/worker.model';
@@ -15,6 +16,7 @@ export class AppComponent {
   title = 'Список сотрудников';
   workers:MyWorker[];
   myWorkerType = MyWorkerType;
+  @Input() searchStr: string;
   constructor(private MyFirstService: MyFirstService){}
 
   ngOnInit() {

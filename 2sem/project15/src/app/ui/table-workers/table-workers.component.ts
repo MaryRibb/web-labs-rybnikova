@@ -7,13 +7,14 @@ import { MyWorker } from 'src/app/shared/worker.model';
   styleUrls: ['./table-workers.component.css']
 })
 export class TableWorkersComponent implements OnInit {
+  @Input() searchStr: string;
   @Input()title:string;
   @Input()workers:MyWorker[]=[];
   @Output()deleteWorker = new EventEmitter<number>();
   @Output() editWorker =
   new EventEmitter<object>();
 
-
+  
   constructor() { }
 
   ngOnInit(): void {

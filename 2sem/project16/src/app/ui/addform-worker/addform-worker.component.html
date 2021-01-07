@@ -1,0 +1,58 @@
+<form [formGroup]=" myFirstReactiveForm">
+<div class="row mb-3 pl-3">
+    <div class="col-12">
+        <h5>Добавить сотрудника</h5>
+   
+    </div>
+    <div class="col-4 mb-2">
+        <input type="text" class="form-control" formControlName="name"
+        placeholder="Имя"
+       >
+    </div>
+    <div class="col-4 mb-2">
+        <input type="text" class="form-control" formControlName="surname"
+        placeholder="Фамилия"
+        >
+        
+    </div>
+    <div class="col-4 mb-2">
+        <input type="text" class="form-control" formControlName="middlename"
+        placeholder="Отчество"
+        >
+        
+    </div>
+    <div class=" mb-2 col-4">
+        <input type="text" class="form-control" formControlName="phone"
+        placeholder="Телефон"
+        [textMask]="{mask: mask}"
+        >
+        
+    </div>
+    <div class="col-4">
+        <input type="text" class="form-control" formControlName="email"
+        placeholder="Email"
+        
+        >
+        
+    </div>
+    <div class="col-4">
+        <input type="text" class="form-control" formControlName="birthday"
+        placeholder="Дата рождения"
+      
+        >
+        
+    </div>
+    <div class="col-2">
+        <select name="" id="" class="custom-select" formControlName="type" >
+            <option [ngValue]="myWorkerType.programmer">IT отдел</option>
+            <option [ngValue]="myWorkerType.sales">Отдел продаж</option>
+            <option [ngValue]="myWorkerType.delivery">Отдел доставки</option>
+            <option [ngValue]="myWorkerType.lawyer" >Юридический отдел</option>
+        </select>
+    </div>
+  <div class="col-12 mt-2">
+      <button [disabled]=" myFirstReactiveForm.controls['name'].invalid ||  myFirstReactiveForm.controls['surname'].invalid ||  myFirstReactiveForm.controls['phone'].invalid ||  myFirstReactiveForm.controls['type'].invalid || myFirstReactiveForm.controls['birthday'].invalid || myFirstReactiveForm.controls['email'].invalid" class="btn btn-outline-primery btn-sm"
+      (click)="onAddWorker()">Добавить</button>
+  </div>
+</div>
+</form>
