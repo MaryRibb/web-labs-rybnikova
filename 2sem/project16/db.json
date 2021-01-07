@@ -1,0 +1,54 @@
+{
+  "workers": [
+    {
+      "id": 1,
+      "name": "Петр",
+      "surname": "Кемеров",
+      "middlename": "Александрович",
+      "type": 0,
+      "phone": "+7 (950) 248-11-97",
+      "email": "rybnikovamary66@gmail.com",
+      "birthday": "2023-03-29"
+    },
+    {
+      "id": 2,
+      "name": "Иван",
+      "surname": "Сидоров",
+      "middlename": "Александрович",
+      "type": 1,
+      "phone": "+7 (950) 248-11-97",
+      "email": "rybnikovamary66@gmail.com",
+      "birthday": "2022-03-29"
+    },
+    {
+      "id": 3,
+      "name": "Алексей",
+      "surname": "Потехо",
+      "middlename": "Александрович",
+      "type": 2,
+      "phone": "+7 (950) 248-11-97",
+      "email": "rybnikovamary66@gmail.com",
+      "birthday": "2021-03-29"
+    },
+    {
+      "id": 4,
+      "name": "Наталья",
+      "surname": "Морозова",
+      "middlename": "Александрович",
+      "type": 3,
+      "phone": "+7 (950) 248-11-97",
+      "email": "rybnikovamary66@gmail.com",
+      "birthday": "2020-03-29"
+    },
+    {
+      "name": "Иван",
+      "surname": "Рыбникова",
+      "middlename": "Александровна",
+      "type": 2,
+      "phone": "+7 (950) 248-11-97",
+      "birthday": "2019-03-29",
+      "email": "rybnikovamary66@gmail.com",
+      "id": 5
+    }
+  ]
+}
