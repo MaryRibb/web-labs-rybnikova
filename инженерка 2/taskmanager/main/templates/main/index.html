@@ -1,0 +1,20 @@
+{%extends 'main/base.html' %}
+{% block title %}{{title}}{%endblock%}
+
+{%block content%}<h1>Главная</h1>
+{% for el in booking%}
+<div class="alert alert-warning mt-2">
+     <h1>Booking</h1>
+
+    <p>Id:{{el.id}}</p>
+     <p>Id клиента:{{el.idclient}}</p>
+
+     <p>Дата бронирования:{{el.dateofbooking}}<p>
+    <p>Время бронирования{{el.timeofbooking}}<p>
+    <p>Тип бронирования:{{el.typebooking}}<p>
+    <p>Номер бронирования:{{el.numberbooking}}<p>
+    <p>Номер счёта:{{el.accountnumber}}<p>
+
+</div>
+{% endfor %}
+{% endblock %}
