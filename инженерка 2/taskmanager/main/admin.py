@@ -32,5 +32,4 @@ class QuestionAdminSite(admin.ModelAdmin):
     fields =['typebooking', 'timeofbooking']
 
 
-admin.site.register(Booking, QuestionAdminSite)
 

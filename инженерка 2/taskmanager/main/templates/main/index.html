@@ -2,6 +2,11 @@
 {% block title %}{{title}}{%endblock%}
 
 {%block content%}<h1>Главная</h1>
+<h3>Фильтрация и поиск по id клиента</h3>
+<form method="get">
+    {{form.as_p}}
+    <input type="submit" value="Поиск">
+</form>
 {% for el in booking%}
 <div class="alert alert-warning mt-2">
      <h1>Booking</h1>

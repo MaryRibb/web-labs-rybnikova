@@ -1,5 +1,18 @@
 {%extends 'main/base.html' %}
-{% block title %}Вторая страница{%endblock%}
+{% block title %}Создание booking{%endblock%}
 
-{%block content%}<h1>Вторая страница</h1>{% endblock %}
+{%block content%}<h1>Создание booking</h1>
+<form method="post">
+    {% csrf_token %}<br>
+    {{ form.dateofbooking }}<br>
+    {{ form.timeofbooking }}<br>
+    {{ form.typebooking }}<br>
+    {{ form.numberbooking }}<br>
+    {{ form.accountnumber }}<br>
+    {{ form.idclient}}<br>
+
+    <button type="submit" class="btn btn-success">Добавить</button>
+</form>
+
+{% endblock %}
 
