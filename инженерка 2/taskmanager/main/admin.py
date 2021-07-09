@@ -32,4 +32,3 @@ class QuestionAdminSite(admin.ModelAdmin):
     fields =['typebooking', 'timeofbooking']
 
 
-

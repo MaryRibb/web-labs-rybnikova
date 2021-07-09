@@ -38,4 +38,3 @@ class TaskForm(ModelForm):
                   'placeholder': 'idclient'
                  }),
         }
-
